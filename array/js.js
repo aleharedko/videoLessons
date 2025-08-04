@@ -18,19 +18,24 @@
 //  LESSON 18 !!!!!!!!!!
 
 
-function makePhrases() {
-    const words1 = ['мой кот', 'моя собака', 'мой попугай'];
-    const words2 = ['любит есть', 'хочет погрызть', 'всегда ищет'];
-    const words3 = ['морковку', 'макароны', 'косточку'];
+// function makePhrases() {
+//     const words1 = ['мой кот', 'моя собака', 'мой попугай'];
+//     const words2 = ['любит есть', 'хочет погрызть', 'всегда ищет'];
+//     const words3 = ['морковку', 'макароны', 'косточку'];
 
-    const randomIndex1 = Math.floor(Math.random() * words1.length);
-    const randomIndex2 = Math.floor(Math.random() * words2.length);
-    const randomIndex3 = Math.floor(Math.random() * words3.length);
+//     const randomIndex1 = Math.floor(Math.random() * words1.length);
+//     const randomIndex2 = Math.floor(Math.random() * words2.length);
+//     const randomIndex3 = Math.floor(Math.random() * words3.length);
 
-    const prase = words1[randomIndex1] + " " + words2[randomIndex2]  + " " + words3[randomIndex3];
-    console.log(prase);
+//     const prase = words1[randomIndex1] + " " + words2[randomIndex2]  + " " + words3[randomIndex3];
+//     console.log(prase);
 
-}
+// }
+
+// makePhrases()
 
 
-makePhrases()
+
+//  LESSON 19 !!!!!!!!!!
+
+
