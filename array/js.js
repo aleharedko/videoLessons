@@ -50,7 +50,7 @@ function makePhrases(param1, param2, param3) {
 console.log(makePhrases(words4, words2, words3));  // ещё один способ вывода
 
 
-//LESSON 21
+//LESSON 21/22
 
 
 // Bubble solution #0 score: 60
@@ -69,6 +69,7 @@ const scores = [60, 50, 60, 58, 54, 54,
 
 // let i = 0;
 let output
+let highScoree = 0;
 
 // while (i < scores.length) {
 //     output = "Bubble solution #" + i + "score:" + scores[i];
@@ -77,11 +78,27 @@ let output
 // }
 
 for (let i = 0; i < scores.length; i++) {
-    output = "Bubble solution #" + i + "score:" + scores[i];
-    console.log(output);
+    if (highScoree < scores[i]) {
+        highScoree = scores[i]
+    }
+    //     output = "Highest bubble score: " + highScoree;
+    //     console.log(output);
 }
 
 console.log("Bubbles tests: " + scores.length);
+console.log("Highest bubble score: " + highScoree);
+
+const bestSolutions = [];
+
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i] === highScoree) {
+        bestSolutions.push(i)
+    }
+    
+}
+
+console.log("Solutions with highest score: " + bestSolutions);
+
 
 
 
