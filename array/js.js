@@ -50,7 +50,7 @@ function makePhrases(param1, param2, param3) {
 console.log(makePhrases(words4, words2, words3));  // ещё один способ вывода
 
 
-//LESSON 21/22
+//LESSON 21/22/23
 
 
 // Bubble solution #0 score: 60
@@ -94,10 +94,55 @@ for (let i = 0; i < scores.length; i++) {
     if (scores[i] === highScoree) {
         bestSolutions.push(i)
     }
-    
+
 }
 
 console.log("Solutions with highest score: " + bestSolutions);
+
+const scores1 = [60, 50, 60, 58, 54, 54,
+    58, 50, 52, 54, 48, 69,
+    34, 55, 51, 52, 44, 51,
+    69, 64, 66, 55, 52, 61,
+    46, 31, 57, 52, 44, 18,
+    41, 53, 55, 61, 51, 44];
+
+const highScore = printGetGighScore(scores1)
+
+function printGetGighScore(array) {
+    let output
+    let highScoree = 0;
+
+
+    for (let i = 0; i < array.length; i++) {
+        output = "Bubble solution #" + i + "score:" + scores1[i];
+        console.log(output);
+        if (highScoree < array[i]) {
+            highScoree = array[i]
+        }
+        //     output = "Highest bubble score: " + highScoree;
+        //     console.log(output);
+    }
+
+
+}
+
+
+function getBestScores(array, maxValue) {
+    const bestSolutions = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === maxValue) {
+            bestSolutions.push(i)
+        }
+        return bestSolutions
+    }
+}
+
+console.log(highScore);
+console.log(getBestScores(scores1, 69));
+
+
+
+
 
 
 
