@@ -15,16 +15,23 @@
 
 
 
-//  LESSON 18/19 !!!!!!!!!!
-function getRandomElement(array){
+//  LESSON 18/19/20 !!!!!!!!!!
+const words1 = ['мой кот', 'моя собака', 'мой попугай'];
+const words2 = ['любит есть', 'хочет погрызть', 'всегда ищет'];
+const words3 = ['морковку', 'макароны', 'косточку'];
+const words4 = ['hemster', 'enot', 'rat']
+
+
+
+function getRandomElement(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex]
 }
 
-function makePhrases() {
-    const words1 = ['мой кот', 'моя собака', 'мой попугай'];
-    const words2 = ['любит есть', 'хочет погрызть', 'всегда ищет'];
-    const words3 = ['морковку', 'макароны', 'косточку'];
+function makePhrases(param1, param2, param3) {
+    // const words1 = ['мой кот', 'моя собака', 'мой попугай'];
+    // const words2 = ['любит есть', 'хочет погрызть', 'всегда ищет'];
+    // const words3 = ['морковку', 'макароны', 'косточку'];
 
     // const randomIndex1 = Math.floor(Math.random() * words1.length);
     // const randomIndex2 = Math.floor(Math.random() * words2.length);
@@ -33,14 +40,14 @@ function makePhrases() {
     //const prase = getRandomElement(words1) + " " + getRandomElement(words2) + " " + getRandomElement(words3)  // более читаемый вариант
     //return prase
 
-    return getRandomElement(words1) + " " + getRandomElement(words2) + " " + getRandomElement(words3) //более лаконичный вариант
-
+    const result = getRandomElement(param1) + " " + getRandomElement(param2) + " " + getRandomElement(param3) //более лаконичный вариант
+    return result
 }
 
 // const result =  makePhrases()  один из способов вывода кода
 // console.log(result);
 
-console.log(makePhrases());  // ещё один способ вывода
+console.log(makePhrases(words4, words2, words3));  // ещё один способ вывода
 
 
 
