@@ -1,4 +1,4 @@
-//lesson 25/26
+//lesson 25/26/27
 
 //cars:
 // make: "Chevy",
@@ -50,3 +50,13 @@ if(car.mileage < 50000){
     console.log('dont need this car');
     
 }
+
+const number = 27
+
+const newNumber = number
+
+const newDog = dog
+console.log(newDog);
+
+newDog.weight = 55;
+console.log(dog);
