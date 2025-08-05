@@ -1,4 +1,4 @@
-//lesson 25
+//lesson 25/26
 
 //cars:
 // make: "Chevy",
@@ -32,4 +32,21 @@ const dog = {
     age: 4,
     breed: "mixed",
     activity: "fetch balls"
+}
+
+//console.log(dog);
+//console.log(dog.name);
+
+dog.weight = 20;
+dog.isDog = true
+
+delete dog.activity
+
+//console.log(dog)
+
+if(car.mileage < 50000){
+    console.log("i by this car");
+} else {
+    console.log('dont need this car');
+    
 }
