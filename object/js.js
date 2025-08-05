@@ -99,4 +99,68 @@ function preaual(car) {
     return false
 }
 
-console.log( preaual(chevy));
+console.log(preaual(chevy));
+
+
+
+//video 29
+const fido = {
+    name: "Fido",
+    weight: 48,
+    breed: "Mixed",
+    loves: "walks"
+};
+
+function loseWeight(dog, amount) {
+    return dog.weight = dog.weight - amount;
+}
+
+
+console.log(loseWeight(fido, 10));
+
+
+const superSecretFile = {
+    level: "classified",
+    opened: 0,
+    password: 2,
+    contents: "Dr. Evel's next meeting is in Detroit."
+};
+
+function getSecret(file, secretPassword) {
+    file.opened = file.opened + 1;
+    if (secretPassword === file.password) {
+        return file.contents;
+    } else {
+        return "Invalid password! No secret for you.";
+    }
+}
+
+const content = getSecret(superSecretFile, 2)
+
+console.log(content);
+
+
+
+function setSecret(file, secretPassword, secret) {
+    if (secretPassword === file.password) {
+        file.opened = 0;
+        file.contents = secret;
+    }
+}
+
+setSecret(superSecretFile, 2, "sit home mother fuker")
+
+console.log(superSecretFile);
+
+
+function setPassword(file, currentPassword, newPassword) {
+    if (currentPassword === file.password) {
+        file.password = newPassword
+    }
+}
+
+setPassword(superSecretFile, 2, 3)
+
+console.log(superSecretFile);
+console.log(getSecret(superSecretFile, 3))
+
