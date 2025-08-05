@@ -50,7 +50,7 @@ function makePhrases(param1, param2, param3) {
 console.log(makePhrases(words4, words2, words3));  // ещё один способ вывода
 
 
-//LESSON 21/22/23
+//LESSON 21/22/23/24
 
 
 // Bubble solution #0 score: 60
@@ -69,7 +69,7 @@ const scores = [60, 50, 60, 58, 54, 54,
 
 // let i = 0;
 let output
-let highScoree = 0;
+
 
 // while (i < scores.length) {
 //     output = "Bubble solution #" + i + "score:" + scores[i];
@@ -77,25 +77,15 @@ let highScoree = 0;
 //     i++
 // }
 
-for (let i = 0; i < scores.length; i++) {
-    if (highScoree < scores[i]) {
-        highScoree = scores[i]
-    }
+
     //     output = "Highest bubble score: " + highScoree;
     //     console.log(output);
-}
+
 
 console.log("Bubbles tests: " + scores.length);
 console.log("Highest bubble score: " + highScoree);
 
-const bestSolutions = [];
 
-for (let i = 0; i < scores.length; i++) {
-    if (scores[i] === highScoree) {
-        bestSolutions.push(i)
-    }
-
-}
 
 console.log("Solutions with highest score: " + bestSolutions);
 
@@ -106,12 +96,55 @@ const scores1 = [60, 50, 60, 58, 54, 54,
     46, 31, 57, 52, 44, 18,
     41, 53, 55, 61, 51, 44];
 
+const costs = [
+    .25, .27, .25, .25, .25, .25,
+    .33, .31, .25, .29, .27, .22,
+    .31, .25, .25, .33, .21, .25,
+    .25, .25, .28, .25, .24, .22,
+    .20, .25, .30, .25, .24, .25,
+    .25, .25, .27, .25, .26, .29
+];
+
+let highScoree = 0;
+const bestSolutions = [];
+
+for (let i = 0; i < scores1.length; i++) {
+    if (scores1[i] === highScoree) {
+        bestSolutions.push(i)
+    }
+
+}
+
+for (let i = 0; i < scores1.length; i++) {
+    if (highScoree < scores1[i]) {
+        highScoree = scores1[i]
+    }
+}
+
+function getMostCostEffectiveSolution(resultArray, costArray, maxValue) {
+    let index;
+    let cost = 100;
+    for (let i = 0; i < resultArray.length; i++) {
+        if (resultArray[i] === maxValue) {
+            if (costArray[i] < cost) {
+                cost  = costArray[i]
+                index = i
+            }
+        }
+        
+    }
+    return index
+}
+
+const resulCost = getMostCostEffectiveSolution(scores1, costs, highScoree)
+console.log("luchee reshenie:" + resulCost);
+
+
 const highScore = printGetGighScore(scores1)
 
 function printGetGighScore(array) {
     let output
     let highScoree = 0;
-
 
     for (let i = 0; i < array.length; i++) {
         output = "Bubble solution #" + i + "score:" + scores1[i];
@@ -122,10 +155,7 @@ function printGetGighScore(array) {
         //     output = "Highest bubble score: " + highScoree;
         //     console.log(output);
     }
-
-
 }
-
 
 function getBestScores(array, maxValue) {
     const bestSolutions = [];
