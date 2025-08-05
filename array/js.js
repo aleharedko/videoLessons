@@ -78,8 +78,8 @@ let output
 // }
 
 
-    //     output = "Highest bubble score: " + highScoree;
-    //     console.log(output);
+//     output = "Highest bubble score: " + highScoree;
+//     console.log(output);
 
 
 console.log("Bubbles tests: " + scores.length);
@@ -112,7 +112,16 @@ for (let i = 0; i < scores1.length; i++) {
     if (scores1[i] === highScoree) {
         bestSolutions.push(i)
     }
+}
 
+function getBestScores(array, maxValue) {
+    const bestSolutions = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === maxValue) {
+            bestSolutions.push(i)
+        }
+    }
+    return bestSolutions
 }
 
 for (let i = 0; i < scores1.length; i++) {
@@ -123,15 +132,11 @@ for (let i = 0; i < scores1.length; i++) {
 
 function getMostCostEffectiveSolution(resultArray, costArray, maxValue) {
     let index;
-    let cost = 100;
-    for (let i = 0; i < resultArray.length; i++) {
-        if (resultArray[i] === maxValue) {
-            if (costArray[i] < cost) {
-                cost  = costArray[i]
-                index = i
-            }
-        }
-        
+    const bestSolutions = getBestScores(resultArray, maxValue)
+    if(costArray[bestSolutions[0]] < costArray[bestSolutions[1]]){
+        index = bestSolutions[0]
+    }else{
+        index = bestSolutions[1]
     }
     return index
 }
